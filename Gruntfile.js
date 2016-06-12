@@ -11,7 +11,8 @@ module.exports = function(grunt) {
     jsdoc : {
       doc : {
         src : [
-          'src/*.js',
+          'src/AlexaSkill.js',
+          'src/index.js',
         ],
         options : {
           destination : 'doc'

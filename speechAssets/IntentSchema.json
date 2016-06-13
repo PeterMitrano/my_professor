@@ -1,23 +1,13 @@
 {
   "intents": [
     {
-      "intent": "AnswerIntent",
-      "slots": [
-        {
-          "name": "Answer",
-          "type": "LIST_OF_ANSWERS"
-        }
-      ]
+      "intent": "ListClassesIntent",
+      "slots": []
     },
 
-        {
-      "intent": "AnswerOnlyIntent",
-      "slots": [
-        {
-          "name": "Answer",
-          "type": "LIST_OF_ANSWERS"
-        }
-      ]
+    {
+      "intent": "NextClassIntent",
+      "slots": []
     },
 
     { "intent": "DontKnowIntent" },

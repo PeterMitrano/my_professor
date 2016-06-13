@@ -30,7 +30,7 @@ MyProfessor.prototype.eventHandlers.onSessionStarted =
 
 /** called when the user invokes our skill with no intent.
  * IE "Alexa, ask my professor" */
-MyProfessor.process.eventHandlers.onLaunch =
+MyProfessor.prototype.eventHandlers.onLaunch =
   function(launchRequest, session, response) {
 
   var output = "Hello, I'm the Professor." +
@@ -48,19 +48,14 @@ MyProfessor.process.eventHandlers.onLaunch =
 };
 
 /** called when the user launches with one of the specified intents **/
-MyProfessor.prototype.eventHandlers.intentHandlers = {
+MyProfessor.prototype.intentHandlers = {
 
-  AnswerIntent: function(intent, session, response) {
-    console.log("intent: AnswerIntent");
+  NextClassIntent: function(intent, session, response) {
+    response.tell("your next class is physics.");
   },
 
-  AnswerOnlyIntent: function(intent, session, response) {
-    console.log("intent: AnswerOnlyIntent");
-  },
-
-  DontKnowIntent: function(intent, session, response) {
-    console.log("intent: DontKnowIntent");
-    response.tell("Congrats, you stumped the shitty AI.");
+  ListClassesIntent: function(intent, session, response) {
+    response.tell("your classes are physics 1001 and chemistry 1001");
   },
 
   AMAZONStartOverIntent: function(intent, session, response) {
